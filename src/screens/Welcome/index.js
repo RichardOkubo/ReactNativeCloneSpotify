@@ -1,20 +1,28 @@
 import React, { useContext } from "react";
-import { View, Text, Image, StyleSheet } from "react-native";
+import { View, Text, ImageBackground, StyleSheet } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { useNavigation } from "@react-navigation/native";
+import { Entypo } from "@expo/vector-icons";
 
 import { styles } from "./style";
 
 export default function Welcome() {
-
   const navigation = useNavigation();
 
   return (
     <View style={styles.container}>
-      <Image
+      <ImageBackground
         source={require("../../../assets/background.jpeg")}
+        resizeMode="stretch"
         style={styles.image}
-      />
+      >
+        <Entypo
+          name="spotify"
+          size={24}
+          color="white"
+          style={styles.icon}
+        />
+      </ImageBackground>
       <View style={styles.logoGroup}>
         <Text style={styles.text}>Milhões de músicas à sua escolha.</Text>
         <Text style={styles.text}>Grátis no Spotify.</Text>
@@ -35,7 +43,10 @@ export default function Welcome() {
           <Text style={styles.textButton}>Continuar com o Facebook</Text>
         </TouchableOpacity>
       </View>
-      <TouchableOpacity style={styles.register} onPress={() => navigation.navigate("Login")}>
+      <TouchableOpacity
+        style={styles.register}
+        onPress={() => navigation.push("Login")}
+      >
         <Text style={styles.textRegister}>Entrar</Text>
       </TouchableOpacity>
     </View>

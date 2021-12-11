@@ -6,10 +6,13 @@ export const styles = StyleSheet.create({
     paddingTop: StatusBar.currentHeight,
   },
   image: {
-    width: "auto",
+    height: 440,
     marginHorizontal: 14,
-    marginBottom: 0,
+    justifyContent: "flex-end"
   },
+  icon: {
+    textAlign: "center",
+    fontSize: 50,  },
   logoGroup: {
     alignItems: "center",
   },

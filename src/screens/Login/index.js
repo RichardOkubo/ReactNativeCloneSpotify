@@ -6,7 +6,7 @@ import { styles } from "./style";
 
 export default function Login() {
   const { signIn } = useContext(AuthContext);
-  
+
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
 
@@ -16,23 +16,41 @@ export default function Login() {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.textLogin}>Login</Text>
-      <TextInput
-        placeholder="Email"
-        style={styles.input}
-        onChange={(e) => setEmail(e.nativeEvent.text)}
-        value={email}
-      />
-      <TextInput
-        secureTextEntry={true}
-        placeholder="Senha"
-        style={styles.input}
-        onChange={(e) => setSenha(e.nativeEvent.text)}
-        value={senha}
-      />
-      <TouchableOpacity style={styles.button} onPress={handleLogin}>
-        <Text style={styles.buttonText}>SIGN IN</Text>
-      </TouchableOpacity>
+      <View style={styles.inputGroup}>
+        <Text style={styles.textInput}>E-mail ou nome de usuário</Text>
+        <TextInput
+          style={styles.input}
+          onChange={(e) => setEmail(e.nativeEvent.text)}
+          value={email}
+        />
+      </View>
+      <View style={styles.inputGroup}>
+        <Text style={styles.textInput}>Senha</Text>
+        <TextInput
+          secureTextEntry={true}
+          style={styles.input}
+          onChange={(e) => setSenha(e.nativeEvent.text)}
+          value={senha}
+        />
+      </View>
+      <View style={styles.buttonGroup}>
+        <TouchableOpacity
+          style={[
+            styles.button,
+            {
+              backgroundColor:
+                senha.length && email.length ? "white" : "#656565",
+            },
+          ]}
+          onPress={handleLogin}
+          disabled={ senha.length > 0 && email.length > 0 ? false : true }
+        >
+          <Text style={styles.textButton}>Entrar</Text>
+        </TouchableOpacity>
+        <TouchableOpacity style={styles.otherButton} onPress={() => {}}>
+          <Text style={styles.textOtherButton}>Entrar sem senha</Text>
+        </TouchableOpacity>
+      </View>
     </View>
   );
 }

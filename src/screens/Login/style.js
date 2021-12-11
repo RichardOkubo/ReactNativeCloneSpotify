@@ -1,11 +1,11 @@
-import { StyleSheet, StatusBar } from "react-native";
+import { StyleSheet } from "react-native";
 //import EStyleSheet from 'react-native-extended-stylesheet';
 
 export const styles = StyleSheet.create({
   container: {
     backgroundColor: "#121212",
     flex: 1,
-    paddingTop: StatusBar.currentHeight + 65,
+    paddingTop: 5,
   },
   inputGroup: {
     marginHorizontal: 14,
@@ -20,6 +20,9 @@ export const styles = StyleSheet.create({
     backgroundColor: "#535353",
     paddingVertical: 10,
     borderRadius: 5,
+    paddingStart: 10,
+    paddingEnd: 10,
+    color: "white",
   },
   buttonGroup: {
     alignItems: "center",

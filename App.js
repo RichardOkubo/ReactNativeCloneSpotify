@@ -1,5 +1,6 @@
 import "react-native-gesture-handler";
 import React from "react";
+import { StatusBar } from "react-native";
 import { NavigationContainer } from "@react-navigation/native";
 import { RootSiblingParent } from 'react-native-root-siblings';
 //import EStyleSheet from 'react-native-extended-stylesheet';
@@ -12,6 +13,7 @@ import { AuthProvider } from "./src/contexts/authContext"
 export default function App() {
   return (
     <NavigationContainer>
+      <StatusBar translucent backgroundColor="transparent" />
       <AuthProvider>
         <RootSiblingParent> 
           <Routes />

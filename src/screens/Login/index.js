@@ -10,6 +10,9 @@ export default function Login() {
   const [email, setEmail] = useState("");
   const [senha, setSenha] = useState("");
 
+  const [focusedEmail, setFocusedEmail] = useState(false);
+  const [focusedSenha, setFocusedSenha] = useState(false);
+
   function handleLogin() {
     signIn(email, senha);
   }
@@ -19,18 +22,34 @@ export default function Login() {
       <View style={styles.inputGroup}>
         <Text style={styles.textInput}>E-mail ou nome de usuário</Text>
         <TextInput
-          style={styles.input}
+          style={[
+            styles.input,
+            {
+              backgroundColor: focusedEmail ? "#808080" : "#535353",
+            },
+          ]}
           onChange={(e) => setEmail(e.nativeEvent.text)}
           value={email}
+          onFocus={() => setFocusedEmail(!focusedEmail)}
+          onBlur={() => setFocusedEmail(!focusedEmail)}
+          selectionColor="white"
         />
       </View>
       <View style={styles.inputGroup}>
         <Text style={styles.textInput}>Senha</Text>
         <TextInput
           secureTextEntry={true}
-          style={styles.input}
+          style={[
+            styles.input,
+            {
+              backgroundColor: focusedSenha ? "#808080" : "#535353",
+            },
+          ]}
           onChange={(e) => setSenha(e.nativeEvent.text)}
           value={senha}
+          onFocus={() => setFocusedSenha(!focusedSenha)}
+          onBlur={() => setFocusedSenha(!focusedSenha)}
+          selectionColor="white"
         />
       </View>
       <View style={styles.buttonGroup}>
@@ -43,7 +62,7 @@ export default function Login() {
             },
           ]}
           onPress={handleLogin}
-          disabled={ senha.length > 0 && email.length > 0 ? false : true }
+          disabled={senha.length > 0 && email.length > 0 ? false : true}
         >
           <Text style={styles.textButton}>Entrar</Text>
         </TouchableOpacity>

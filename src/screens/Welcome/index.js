@@ -13,7 +13,7 @@ export default function Welcome() {
   return (
     <View style={styles.container}>
       <ImageBackground
-        source={require("../../../assets/background.jpeg")}
+        source={require("../../assets/background.jpeg")}
         resizeMode="stretch"
         style={styles.image}
       >

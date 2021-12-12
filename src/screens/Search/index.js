@@ -1,12 +1,9 @@
-import React from "react";
-import { View, Text } from "react-native";
+import React, { useContext } from "react";
 
-import { styles } from "./style";
+import Warning from "../../components/Warning";
 
 export default function Search() {
   return (
-    <View style={styles.container}>
-      <Text style={styles.text}>Search</Text>
-    </View>
+    <Warning nameScreen="Buscar" />
   );
 }

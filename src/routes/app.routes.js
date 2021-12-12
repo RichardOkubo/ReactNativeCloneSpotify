@@ -4,7 +4,7 @@ import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import {
   Entypo,
   EvilIcons,
-  MaterialCommunityIcons,
+  Ionicons,
   FontAwesome5,
 } from "@expo/vector-icons";
 
@@ -12,7 +12,6 @@ import Home from "../screens/Home";
 import Search from "../screens/Search";
 import Library from "../screens/Library";
 import Premium from "../screens/Premium";
-import { Colors } from "../styles/colors";
 
 const AppStack = createStackNavigator();
 const AppBottomTab = createBottomTabNavigator();
@@ -21,7 +20,7 @@ function BottomTabNavigator() {
   return (
     <AppBottomTab.Navigator
       screenOptions={{
-        tabBarActiveTintColor: Colors.dark.tint,
+        tabBarActiveTintColor: "white",
         tabBarStyle: {
           backgroundColor: "rgba(0, 0, 0, 0.9)",
           borderTopWidth: 0,
@@ -67,8 +66,8 @@ function BottomTabNavigator() {
         options={{
           headerShown: false,
           tabBarIcon: ({ color }) => (
-            <MaterialCommunityIcons
-              name="library"
+            <Ionicons
+              name="md-library"
               size={25}
               style={{ marginBottom: -10 }}
               color={color}

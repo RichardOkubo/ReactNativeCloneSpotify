@@ -1,5 +1,5 @@
 import React from "react";
-import { createStackNavigator } from "@react-navigation/stack";
+import { createStackNavigator, CardStyleInterpolators } from "@react-navigation/stack";
 //import { createNativeStackNavigator } from '@react-navigation/native-stack'
 
 import Welcome from "../screens/Welcome";
@@ -10,7 +10,7 @@ const AuthStack = createStackNavigator();
 
 export default function AuthRoutes() {
   return (
-    <AuthStack.Navigator options={{animation: "slide_from_right"}}>
+    <AuthStack.Navigator screenOptions={{ presentation: 'modal', }}>
       <AuthStack.Screen
         name="Welcome"
         component={Welcome}

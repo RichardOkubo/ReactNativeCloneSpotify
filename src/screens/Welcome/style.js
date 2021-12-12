@@ -8,11 +8,12 @@ export const styles = StyleSheet.create({
   image: {
     height: 440,
     marginHorizontal: 14,
-    justifyContent: "flex-end"
   },
   icon: {
     textAlign: "center",
-    fontSize: 50,  },
+    fontSize: 50,
+    marginBottom: 15,
+  },
   logoGroup: {
     alignItems: "center",
   },

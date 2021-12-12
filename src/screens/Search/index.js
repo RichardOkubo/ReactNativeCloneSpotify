@@ -1,11 +1,12 @@
-import React, { useContext } from "react";
+import React from "react";
 import { View, Text } from "react-native";
+
 import { styles } from "./style";
 
-export default function Home() {
+export default function Search() {
   return (
     <View style={styles.container}>
-      <Text style={styles.text}>Home</Text>
+      <Text style={styles.text}>Search</Text>
     </View>
   );
 }

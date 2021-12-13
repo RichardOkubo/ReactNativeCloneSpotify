@@ -3,7 +3,7 @@ import { View, Image, Text, TouchableOpacity } from "react-native";
 
 import { styles } from "./style";
 
-export default function Album({ album }) {
+export default function AlbumPrevious({ album }) {
   return (
     <TouchableOpacity>
       <View style={styles.container}>

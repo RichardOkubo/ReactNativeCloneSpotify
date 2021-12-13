@@ -1,6 +1,6 @@
 export default [
   {
-    id: "1",
+    key: "1",
     title: "Tocadas recentemente",
     albums: [
       {
@@ -31,7 +31,7 @@ export default [
     ],
   },
   {
-    id: "2",
+    key: "2",
     title: "Por onde começar",
     albums: [
       {
@@ -62,7 +62,7 @@ export default [
     ],
   },
   {
-    id: "3",
+    key: "3",
     title: "Experimente algo diferente",
     albums: [
       {
@@ -93,7 +93,7 @@ export default [
     ],
   },
   {
-    id: "4",
+    key: "4",
     title: "Seus mixes mais ouvidos",
     albums: [
       {
@@ -124,7 +124,7 @@ export default [
     ],
   },
   {
-    id: "5",
+    key: "5",
     title: "Paradas em destaque",
     albums: [
       {
@@ -155,7 +155,7 @@ export default [
     ],
   },
   {
-    id: "6",
+    key: "6",
     title: "Para cantar junto",
     albums: [
       {
@@ -186,7 +186,7 @@ export default [
     ],
   },
   {
-    id: "7",
+    key: "7",
     title: "Flashback",
     albums: [
       {
@@ -217,7 +217,7 @@ export default [
     ],
   },
   {
-    id: "8",
+    key: "8",
     title: "Hora de comer",
     albums: [
       {
@@ -248,7 +248,7 @@ export default [
     ],
   },
   {
-    id: "9",
+    key: "9",
     title: "Relaxante",
     albums: [
       {
@@ -279,7 +279,7 @@ export default [
     ],
   },
   {
-    id: "10",
+    key: "10",
     title: "Para treinar",
     albums: [
       {
@@ -310,7 +310,7 @@ export default [
     ],
   },
   {
-    id: "11",
+    key: "11",
     title: "Os maiores hits do momento",
     albums: [
       {
@@ -341,8 +341,8 @@ export default [
     ],
   },
   {
-    id: "12",
-    title: "Astral",
+    key: "12",
+    title: "Seu astral",
     albums: [
       {
         id: "31",
@@ -372,7 +372,38 @@ export default [
     ],
   },
   {
-    id: "13",
+    key: "13",
+    title: "Artistas sugeridos",
+    artists: [
+      {
+        id: "31",
+        uri: "https://community.spotify.com/t5/image/serverpage/image-id/55829iC2AD64ADB887E2A5/image-size/large?v=v2&px=999",
+        name: "Nome do artista",
+      },
+      {
+        id: "32",
+        uri: "https://community.spotify.com/t5/image/serverpage/image-id/55829iC2AD64ADB887E2A5/image-size/large?v=v2&px=999",
+        name: "Nome do artista",
+      },
+      {
+        id: "33",
+        uri: "https://community.spotify.com/t5/image/serverpage/image-id/55829iC2AD64ADB887E2A5/image-size/large?v=v2&px=999",
+        name: "Nome do artista",
+      },
+      {
+        id: "34",
+        uri: "https://community.spotify.com/t5/image/serverpage/image-id/55829iC2AD64ADB887E2A5/image-size/large?v=v2&px=999",
+        name: "Nome do artista",
+      },
+      {
+        id: "35",
+        uri: "https://community.spotify.com/t5/image/serverpage/image-id/55829iC2AD64ADB887E2A5/image-size/large?v=v2&px=999",
+        name: "Nome do artista",
+      },
+    ],
+  },
+  {
+    key: "14",
     title: "Músicas novinhas em folha",
     albums: [
       {
@@ -403,7 +434,7 @@ export default [
     ],
   },
   {
-    id: "14",
+    key: "15",
     title: "Instrumental",
     albums: [
       {
@@ -434,7 +465,7 @@ export default [
     ],
   },
   {
-    id: "15",
+    key: "16",
     title: "Recomendado para hoje",
     albums: [
       {
@@ -465,7 +496,7 @@ export default [
     ],
   },
   {
-    id: "16",
+    key: "17",
     title: "Episódios para você",
     albums: [
       {
@@ -496,7 +527,7 @@ export default [
     ],
   },
   {
-    id: "17",
+    key: "18",
     title: "Podcasts originais e exclusivos do Spotify",
     albums: [
       {
@@ -527,7 +558,7 @@ export default [
     ],
   },
   {
-    id: "18",
+    key: "19",
     title: "Programas para conhecer",
     albums: [
       {

@@ -1,23 +1,19 @@
-import React, { useContext } from "react";
-import { View, Text, FlatList } from "react-native";
+import React, { useMemo } from "react";
+import { View, FlatList } from "react-native";
 
-import Options from "../../components/Options";
-import AlbumCategory from "../../components/AlbumCategory";
-import albumCategories from "../../data/albumCategories";
-import PreviousSong from "../../components/PreviousSong";
+import Items from "./items";
 
 import { styles } from "./style";
 
 export default function Home() {
+  const data = useMemo(() => Items, []);
+
   return (
     <View style={styles.container}>
-      <Options />
       <FlatList
-        data={albumCategories}
-        renderItem={({ item }) => (
-          <AlbumCategory title={item.title} albums={item.albums} />
-        )}
-        keyExtractor={(item) => item.id}
+        data={data}
+        renderItem={({ item }) => item.render()}
+        keyExtractor={(item) => item.key}
       />
     </View>
   );

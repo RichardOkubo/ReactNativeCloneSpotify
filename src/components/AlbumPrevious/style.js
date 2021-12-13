@@ -3,14 +3,14 @@ import { StyleSheet } from "react-native";
 export const styles = StyleSheet.create({
   container: {
     margin: 10,
-    width: 155,
+    marginTop: 15,
   },
   image: {
-    width: 164,
-    height: 164,
+    width: 120,
+    height: 120,
   },
   text: {
-    color: "grey",
+    color: "white",
     marginTop: 10,
   },
 });

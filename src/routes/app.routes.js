@@ -1,12 +1,7 @@
 import React from "react";
 import { createStackNavigator } from "@react-navigation/stack";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import {
-  Entypo,
-  EvilIcons,
-  Ionicons,
-  FontAwesome5,
-} from "@expo/vector-icons";
+import { Entypo, EvilIcons, Ionicons, FontAwesome5 } from "@expo/vector-icons";
 
 import Home from "../screens/Home";
 import Search from "../screens/Search";
@@ -22,7 +17,11 @@ function BottomTabNavigator() {
       screenOptions={{
         tabBarActiveTintColor: "white",
         tabBarStyle: {
-          backgroundColor: "rgba(0, 0, 0, 0.9)",
+          backgroundColor: "rgba(0, 0, 0, 0.85)",
+          position: 'absolute',
+          left: 0,
+          bottom: 0,
+          right: 0,
           borderTopWidth: 0,
           elevation: 0,
           height: 60,

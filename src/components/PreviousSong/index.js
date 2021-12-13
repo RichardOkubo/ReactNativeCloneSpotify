@@ -1,18 +1,22 @@
 import React from "react";
 import { View, Text, FlatList } from "react-native";
 
-import Album from "../Album";
-import albumCategoryFake from "./fakeData"
+import AlbumPrevious from "../AlbumPrevious";
+import Options from "../Options";
+import fakeData from "../../data/fakeData";
 
 import { styles } from "./style";
 
-export default function PreviousSong() {
+export default function PreviousSong({ title, albums }) {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>{albumCategoryFake.title}</Text>
+      <View style={styles.header}>
+        <Text style={styles.title}>{title}</Text>
+        <Options />
+      </View>
       <FlatList
-        data={albumCategoryFake.albums}
-        renderItem={({ item }) => <Album album={item} />}
+        data={albums}
+        renderItem={({ item }) => <AlbumPrevious album={item} />}
         keyExtractor={(item) => item.id}
         showsHorizontalScrollIndicator={false}
         horizontal

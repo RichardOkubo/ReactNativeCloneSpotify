@@ -22,11 +22,11 @@ export const styles = StyleSheet.create({
     borderWidth: 2,
     marginTop: 30,
     paddingHorizontal: 15,
-    paddingVertical:5,
+    paddingVertical: 5,
     borderRadius: 25,
   },
   textButton: {
     color: "white",
     fontWeight: "bold",
-  }
+  },
 });

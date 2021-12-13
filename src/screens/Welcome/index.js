@@ -3,9 +3,9 @@ import { View, Text, ImageBackground, StyleSheet } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { useNavigation } from "@react-navigation/native";
 import { Entypo } from "@expo/vector-icons";
+import { LinearGradient } from "expo-linear-gradient";
 
 import { styles } from "./style";
-import { LinearGradient } from "expo-linear-gradient";
 
 export default function Welcome() {
   const navigation = useNavigation();

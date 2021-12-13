@@ -1,3 +1,4 @@
+/*
 import React from "react";
 import { View, Text, ImageBackground, StyleSheet } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
@@ -52,7 +53,7 @@ export default function Welcome() {
               })
             }
           >
-            Continuar com um número de telefon
+            Continuar com um número de telefone
           </Text>
         </TouchableOpacity>
         <TouchableOpacity
@@ -87,3 +88,4 @@ export default function Welcome() {
     </View>
   );
 }
+*/

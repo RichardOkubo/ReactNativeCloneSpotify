@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { View, TouchableOpacity, Text, TextInput } from "react-native";
-import { Ionicons } from "@expo/vector-icons";
+import { Ionicons, AntDesign } from "@expo/vector-icons";
 import Toast from "react-native-root-toast";
 
 import AuthContext from "../../contexts/authContext";
@@ -23,6 +23,14 @@ export default function Login() {
 
   return (
     <View style={styles.container}>
+      <TouchableOpacity>
+        <AntDesign
+          style={styles.arrow}
+          name="arrowleft"
+          size={24}
+          color="white"
+        />
+      </TouchableOpacity>
       <View style={[styles.inputGroup, { marginBottom: 40 }]}>
         <Text style={styles.textInput}>E-mail ou nome de usuário</Text>
         <TextInput
@@ -69,7 +77,9 @@ export default function Login() {
           </TouchableOpacity>
         </View>
       </View>
-      <Text style={[styles.info, {color: correctData ? "transparent" : "white"}]}>
+      <Text
+        style={[styles.info, { color: correctData ? "transparent" : "white" }]}
+      >
         O e-mail ou senha inseridos estão incorretos.
       </Text>
       <View style={styles.buttonGroup}>

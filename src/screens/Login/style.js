@@ -6,6 +6,10 @@ export const styles = StyleSheet.create({
     flex: 1,
     paddingTop: 5,
   },
+  arrow: {
+    marginLeft: 14,
+    marginBottom: 24,
+  },
   inputGroup: {
     marginHorizontal: 14,
   },

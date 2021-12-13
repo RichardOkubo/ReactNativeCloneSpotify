@@ -8,7 +8,6 @@ export const styles = StyleSheet.create({
   },
   inputGroup: {
     marginHorizontal: 14,
-    marginBottom: 40,
   },
   textInput: {
     color: "white",
@@ -18,10 +17,29 @@ export const styles = StyleSheet.create({
   input: {
     backgroundColor: "#535353",
     paddingVertical: 10,
-    borderRadius: 5,
+    borderTopLeftRadius: 5,
+    borderBottomLeftRadius: 5,
     paddingStart: 10,
-    paddingEnd: 10,
+    paddingEnd: 5,
     color: "white",
+  },
+  inputWithEye: {
+    flexDirection: "row",
+    alignItems: "center",
+  },
+  icon: {
+    color: "white",
+    backgroundColor: "#535353",
+    paddingVertical: 11,
+    paddingHorizontal: 10,
+    borderBottomRightRadius: 5,
+    borderTopRightRadius: 5,
+  },
+  info: {
+    paddingTop: 15,
+    paddingBottom: 10,
+    paddingLeft: 14,
+    fontSize: 16.5,
   },
   buttonGroup: {
     alignItems: "center",

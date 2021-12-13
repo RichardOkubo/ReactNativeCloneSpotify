@@ -1,15 +1,16 @@
-import React, { useContext } from "react";
+import React from "react";
 import { View, Text, ImageBackground, StyleSheet } from "react-native";
 import { TouchableOpacity } from "react-native-gesture-handler";
 import { useNavigation } from "@react-navigation/native";
 import { Entypo } from "@expo/vector-icons";
 import { LinearGradient } from "expo-linear-gradient";
+import Toast from "react-native-root-toast";
 
 import { styles } from "./style";
 
 export default function Welcome() {
   const navigation = useNavigation();
-
+  
   return (
     <View style={styles.container}>
       <ImageBackground
@@ -30,18 +31,50 @@ export default function Welcome() {
         <Text style={styles.text}>Grátis no Spotify.</Text>
       </View>
       <View style={styles.buttonGroup}>
-        <TouchableOpacity style={styles.otherButton}>
+        <TouchableOpacity
+          style={styles.otherButton}
+          onPress={() =>
+            Toast.show("Funcionalidade indisponível.\nClique em 'Entrar'", {
+              backgroundColor: "white",
+              textColor: "black",
+            })
+          }
+        >
           <Text style={styles.textOtherButton}>Inscreva-se grátis</Text>
         </TouchableOpacity>
         <TouchableOpacity style={styles.button}>
-          <Text style={styles.textButton}>
+          <Text
+            style={styles.textButton}
+            onPress={() =>
+              Toast.show("Funcionalidade indisponível.\nClique em 'Entrar'", {
+                backgroundColor: "white",
+                textColor: "black",
+              })
+            }
+          >
             Continuar com um número de telefon
           </Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() =>
+            Toast.show("Funcionalidade indisponível.\nClique em 'Entrar'", {
+              backgroundColor: "white",
+              textColor: "black",
+            })
+          }
+        >
           <Text style={styles.textButton}>Continuar com o Google</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.button}>
+        <TouchableOpacity
+          style={styles.button}
+          onPress={() =>
+            Toast.show("Funcionalidade indisponível.\nClique em 'Entrar'", {
+              backgroundColor: "white",
+              textColor: "black",
+            })
+          }
+        >
           <Text style={styles.textButton}>Continuar com o Facebook</Text>
         </TouchableOpacity>
       </View>

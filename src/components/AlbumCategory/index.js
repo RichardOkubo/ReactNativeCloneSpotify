@@ -6,7 +6,7 @@ import Album from "../Album";
 
 export default function AlbumCategory({ title, albums }) {
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { paddingBottom: title === "Programas para conhecer" ? 70 : 0}]}>
       <Text style={styles.title}>{title}</Text>
       <FlatList
         data={albums}

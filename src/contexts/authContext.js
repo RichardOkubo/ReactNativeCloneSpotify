@@ -1,6 +1,5 @@
 import React, { createContext, useState, useEffect, useContext } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
-import Toast from "react-native-root-toast";
 
 import api from "../services/api";
 
@@ -10,6 +9,7 @@ export const AuthProvider = ({ children }) => {
   const [signed, setSigned] = useState(false);
   const [user, setUser] = useState({});
   const [loading, setLoading] = useState(true);
+  const [correctData, setCorrectData] = useState(true);
 
   useEffect(() => {
     async function loadStorageData() {
@@ -23,7 +23,6 @@ export const AuthProvider = ({ children }) => {
         setUser(JSON.parse(storageUser));
         setLoading(false)
       }
-
     }
 
     loadStorageData();
@@ -42,7 +41,7 @@ export const AuthProvider = ({ children }) => {
         AsyncStorage.setItem("@user", JSON.stringify(data[0].user));
         AsyncStorage.setItem("@token", data[0].token);
       } else {
-        Toast.show("Dados inválidos");
+        setCorrectData(false)
       }
     } catch (error) {
       console.log(error);
@@ -64,6 +63,8 @@ export const AuthProvider = ({ children }) => {
         signOut,
         user,
         loading,
+        correctData,
+        setCorrectData
       }}
     >
       {children}

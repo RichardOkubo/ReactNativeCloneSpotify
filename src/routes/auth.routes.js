@@ -24,6 +24,7 @@ export default function AuthRoutes() {
             backgroundColor: "#121212",
             elevation: 0,
             shadowOpacity: 0,
+            height: 40,
           },
         }}
       />
